@@ -12,7 +12,7 @@ all:
 	gcc test_app.c -o test_app
 clean:
 	make -C $(KER_DIR) M=$(PWD) clean
-
+	rm -rf test_app
 install:
 	sudo rmmod usb_storage
 	sudo insmod usb.ko
